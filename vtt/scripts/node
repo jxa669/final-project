@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+import rospy
+import vtt.voice_recognition.voice_recognition as sr
+import vtt.text_reasoning.text_reasoning as tr
+recognizer = sr.Recognizer()
+microphone = sr.Microphone()
+tr = tr.textreasoning()
+class command_robot(object):
+	if __name__ == "__main__":
+		try:
+			rospy.init_node("node")
+			with microphone as source: recognizer.adjust_for_ambient_noise(source)
+			#print("Set minimum energy threshold to {}".format(r.energy_threshold))
+			while True:
+				print("Waiting for command")
+				with microphone as source: audio = recognizer.listen(source)
+				print("Processing command")
+				try:
+				#recognize speech using Google Speech Recognition
+					value = recognizer.recognize_google(audio)
+					print(u"You said {}".format(value).encode("utf-8"))
+					tr.update_command(value)
+				except sr.UnknownValueError:
+				    print("Unable to process command")
+				except sr.RequestError as e:
+				    print("Couldn't request results from Google Speech Recognition service; {0}".format(e))
+		except KeyboardInterrupt:
+			pass
