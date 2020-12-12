@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="vtt" type="node" name="node" output="screen">
+         <rosparam command="load" file="$(find vtt)/data/features.yaml" param="features"/>
+    </node>
+</launch>
