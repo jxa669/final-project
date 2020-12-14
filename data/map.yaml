@@ -1,6 +1,455 @@
 image: map.png
 resolution: 0.05
 origin: [0.0, 0.0, 0.0]
-negate: 0
 occupied_thresh: 0.65
 free_thresh: 0.196
+negate: 0
+-  
+  name: label1
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 59.1	
+          y: 36.4
+          z: 0.00102
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label2
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 57.6	
+          y: 6.18
+          z: 0.00249
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label3
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 50	
+          y: 21.5
+          z: 0.0197
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label4
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 43.1	
+          y: 24.5
+          z: 0.0141
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label5
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 43.1	
+          y: 20.2
+          z: 0.00058
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label6
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 43.1	
+          y: 16.4
+          z: 0.00313
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label7
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 43.1	
+          y: 12.5
+          z: 0.0073
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label8
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 43.1	
+          y: 8.68
+          z: 0.00753
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label9
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 43.1	
+          y: 4.7
+          z: 0.00143
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label10
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 42.3	
+          y: 1.04
+          z: 0.0063
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label11
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 36.2	
+          y: 15.3
+          z: 0.0106
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label12
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 33.9
+          y: 15.3
+          z: 0.0048
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label13
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 31.3	
+          y: 15.3
+          z: 0.00311
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label14
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 28.7	
+          y: 15.3
+          z: 0.00756
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label15
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 26.2	
+          y: 15.3
+          z: 0.00529
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label16
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 23.7	
+          y: 15.3
+          z: 0.00058
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label17
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 21.4	
+          y: 15.3
+          z: 0.00568
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label18
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 18.7	
+          y: 15.3
+          z: 0.00845
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label19
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 16.3	
+          y: 15.3
+          z: 0.0107
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label20
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 14	
+          y: 15.3
+          z: 0.0116
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label21
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 11.5	
+          y: 15.3
+          z: 0.00644
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label22
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 8.99	
+          y: 15.3
+          z: 0.0125
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label23
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 6.45	
+          y: 15.3
+          z: 0.00471
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label24
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 3.72	
+          y: 15.3
+          z: 0.00339
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label25
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 1.26	
+          y: 15.3
+          z: 0.0064
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label26
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 2.06	
+          y: 36.9
+          z: 0.00106
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label27
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 7.12	
+          y: 36.9
+          z: 0.00575
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label28
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 12.5	
+          y: 37
+          z: 0.00343
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label29
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 18	
+          y: 36.9
+          z: 0.0138
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label30
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 23.7	
+          y: 36.9
+          z: 0.00295
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: label31
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 40.1	
+          y: 37.9
+          z: 0.00967
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
+  name: labelR1
+  frame_id: map
+  radius: 0.920
+  pose:
+      position:
+          x: 58.1	
+          y: 30.2
+          z: 0.00637
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+-
