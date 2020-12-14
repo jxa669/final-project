@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import rospy
-from geometry_msgs.msg import Pose
+from geometry_msgs.msg import Pose, PoseStamped
 import vtt.voice_recognition.voice_recognition as sr
 import vtt.text_reasoning.text_reasoning as tr
 
@@ -10,8 +10,8 @@ class command_robot(object):
 		self.microphone = sr.Microphone()
 		self.text_reasoning = tr.textreasoning()
 		
-		self.command_publisher = rospy.Publisher("/command", Pose)
-		self.direction_publisher = rospy.Publisher("/direction", Pose)
+		self.command_publisher = rospy.Publisher("/command", PoseStamped)
+		self.direction_publisher = rospy.Publisher("/direction", PoseStamped)
 		self.features = rospy.get_param('~features')
 		print(self.features[1]['pose'])
 		#next(item for item in self.features if item["name"] == "label1"){print(item)}
@@ -29,23 +29,29 @@ class command_robot(object):
 					value = node.recognizer.recognize_google(audio)
 					print(u"You said {}".format(value).encode("utf-8"))
 					text = node.text_reasoning.voice_to_text(value)
+					if text is None:
+						continue
 					if text[0] == "direction":
 						for feature in self.features:
 							if feature['name'] == text[1]:
-								goal = Pose()
-								goal.position.x = feature['pose']['position']['x']
-								goal.position.y = feature['pose']['position']['y']
-								goal.position.z = feature['pose']['position']['z']
-								goal.orientation.w = feature['pose']['orientation']['w']
+								goal = PoseStamped()
+								
+								goal.pose.position.x = feature['pose']['position']['x']
+								goal.pose.position.y = feature['pose']['position']['y']
+								goal.pose.position.z = feature['pose']['position']['z']
+								goal.pose.orientation.w = feature['pose']['orientation']['w']
+								goal.header.frame_id = "/map"
 								self.direction_publisher.publish(goal)
 					elif text[0] == "command":
 						for feature in self.features:
 							if feature['name'] == text[1]:
-								goal = Pose()
-								goal.position.x = feature['pose']['position']['x']
-								goal.position.y = feature['pose']['position']['y']
-								goal.position.z = feature['pose']['position']['z']
-								goal.orientation.w = feature['pose']['orientation']['w']
+								goal = PoseStamped()
+								
+								goal.pose.position.x = feature['pose']['position']['x']
+								goal.pose.position.y = feature['pose']['position']['y']
+								goal.pose.position.z = feature['pose']['position']['z']
+								goal.pose.orientation.w = feature['pose']['orientation']['w']
+								goal.header.frame_id = "map"
 								self.command_publisher.publish(goal)
 				except sr.UnknownValueError:
 					print("Unable to process command or query")
