@@ -7,7 +7,7 @@ pf.KFLocaliser() to do the localisation.
 """
 
 import rospy
-import supermarket
+import inst
 import path_finding.a_star
 from path_finding.util import *
 from sound_play.libsoundplay import SoundClient

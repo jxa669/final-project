@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<package>
-  <name>supermarket_directions</name>
+<package format="2">
+  <name>inst</name>
   <version>0.0.0</version>
   <description>The supermarket directions package</description>
 
@@ -44,12 +44,14 @@
   <build_depend>nav_msgs</build_depend>
   <build_depend>rospy</build_depend>
   <build_depend>sensor_msgs</build_depend>
+  <build_depend>sound_play</build_depend>
   <build_depend>tf</build_depend>
-  <run_depend>geometry_msgs</run_depend>
-  <run_depend>nav_msgs</run_depend>
-  <run_depend>rospy</run_depend>
-  <run_depend>sensor_msgs</run_depend>
-  <run_depend>tf</run_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>sound_play</exec_depend>
+  <exec_depend>tf</exec_depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->

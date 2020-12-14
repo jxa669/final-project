@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 2.8.3)
-project(supermarket_directions)
+cmake_minimum_required(VERSION 3.0.2)
+project(inst)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)

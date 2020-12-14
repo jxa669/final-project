@@ -136,11 +136,11 @@ class SensorModel(object):
         delta_y = y2 - y1
         m = (max(abs(delta_x), abs(delta_y)))
         if m == 0:
-            return self.path_free_f(int(x1), int(y1), self.ROBOT_SIZE)
+            return self.path_free_f(int(x1), int(y1), self.ROBOT_SIZE - 2)
         for i in range(int(m) + 1):
             x = int(x1 + (delta_x * i) / m)
             y = int(y1 + (delta_y * i) / m)
-            if not self.path_free_f(x, y, self.ROBOT_SIZE):
+            if not self.path_free_f(x, y, self.ROBOT_SIZE - 2):
                 return i
         return -1
         

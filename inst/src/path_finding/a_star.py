@@ -122,12 +122,11 @@ class AStar(object):
                             
                             
                     number_of_turns = self.get_number_of_turns(data_points)
-                    '''
+                    
                     import matplotlib.pyplot as plt
                     plt.plot(data_points)
                     plt.ylabel('some numbers')
                     plt.show()
-                    '''
 
                     if (distance < 1.5 and number_of_turns <= 1):
                         print(distance)
@@ -176,14 +175,14 @@ class AStar(object):
                     number_of_turns = self.get_number_of_turns(data_points)
 
                     if (distance < 1.5 and number_of_turns <= 1):
-                        '''
+                        
                         print(distance)
 
                         import matplotlib.pyplot as plt
                         plt.plot(data_points)
                         plt.ylabel('some numbers')
                         plt.show()
-                        '''
+                        
                         self.directions.append("Then immediately turn left")
                     else:
                         if (number_of_turns == 1):
@@ -219,12 +218,12 @@ class AStar(object):
         mean = np.mean(np.array(data_points))
         for k in range(1, len(data_points), 1):
             x = data_points[k]
-            if (x < mean * 0.8 - 5.0):
+            if (x < mean * 0.3 - 5.0):
                 if (close != 0):
                     number_of_turns += 1
                     close = 0
                     #print("Low at " + str(counter))
-            elif (x > mean * 1.2 + 5.0):
+            elif (x > mean * 1.7 + 5.0):
                 if (close != 1):
                     close = 1
                     #print("High at " + str(counter))

@@ -4,11 +4,11 @@
 
 ### sound-play:
 
-* To install sound-play use
+* To install sound-play for melodic ros use:
         
-        sudo apt-get install ros-melodic-sound-play #for melodic ros
+        sudo apt-get install ros-melodic-sound-play
 
-* To run the directions
+* To run the directions:
 
-        #TODO add launch file
+        roslaunch inst launch.launch
 

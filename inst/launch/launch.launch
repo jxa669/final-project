@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="sound_play" type="soundplay_node.py" name="soundplay_node"></node>
+    <node pkg="inst" type="pathfinding" name="inst" output="screen"></node>
+</launch>
