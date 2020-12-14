@@ -51,7 +51,7 @@ class command_robot(object):
 								goal.pose.position.y = feature['pose']['position']['y']
 								goal.pose.position.z = feature['pose']['position']['z']
 								goal.pose.orientation.w = feature['pose']['orientation']['w']
-								goal.header.frame_id = "/map"
+								goal.header.frame_id = "map"
 								self.command_publisher.publish(goal)
 				except sr.UnknownValueError:
 					print("Unable to process command or query")
