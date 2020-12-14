@@ -1,0 +1,9 @@
+<launch>
+	<node name="Stage" pkg="stage_ros" type="stageros" args="$(find vtt)/data/map.world"></node>
+	<node name="map" pkg="map_server" type="map_server" args="$(find vtt)/data/map.yaml"></node>
+	<node name="Amcl" pkg="amcl" type="amcl" args="scan:=base_scan">
+		<param name="initial_pose_x" value="25.0"/>
+		<param name="initial_pose_y" value="15.0"/>
+	</node>
+	<node type="rviz" name="rviz" pkg="rviz" args="-d $(find nav)/nav.rviz"></node>
+</launch>
