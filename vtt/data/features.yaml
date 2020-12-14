@@ -432,17 +432,3 @@
           y: 0
           z: 0
           w: 1
--
-  name: labelR1
-  frame_id: map
-  radius: 0.920
-  pose:
-      position:
-          x: 58.1
-          y: 30.2
-          z: 0.00637
-      orientation:
-          x: 0
-          y: 0
-          z: 0
-          w: 1
