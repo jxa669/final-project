@@ -1,16 +1,4 @@
 <launch>
-	<node name="Stage" pkg="stage_ros" type="stageros" args="$(find vtt)/data/map.world"></node>
-	<node name="map_server" pkg="map_server" type="map_server" args="$(find vtt)/data/map.yaml"></node>
-	<node name="amcl" pkg="amcl" type="amcl" args="scan:=base_scan">
-		<param name="initial_pose_x" value="25.0"/>
-		<param name="initial_pose_y" value="15.0"/>
-	</node>
-	<node type="rviz" name="rviz" pkg="rviz" args="-d $(find nav)/nav.rviz"></node>
-	<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" args="scan:=base_scan /move_base_simple/goal:=command">
-	   	<rosparam file="$(find nav)/config/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
-		<rosparam file="$(find nav)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
-		<rosparam file="$(find nav)/config/local_costmap_params.yaml" command="load" />
-		<rosparam file="$(find nav)/config/global_costmap_params.yaml" command="load" /> 
-		<rosparam file="$(find nav)/config/base_local_planner_params.yaml" command="load" />
-	</node>
+	<include file="$(find nav)/launch/base.launch"/>
+	<include file="$(find nav)/launch/nav.launch"/>
 </launch>
