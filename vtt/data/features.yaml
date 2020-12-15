@@ -29,7 +29,7 @@
   frame_id: map
   pose:
       position:
-          x: 25.9	
+          x: 25.9
           y: 10.9
           z: 0.00296
       orientation:
@@ -42,7 +42,7 @@
   frame_id: map
   pose:
       position:
-          x: 20.8	
+          x: 20.8
           y: 12.3
           z: 0.00134
       orientation:
@@ -55,7 +55,7 @@
   frame_id: map
   pose:
       position:
-          x: 20.8	
+          x: 20.8
           y: 10.2
           z: 0.00598
       orientation:
@@ -68,7 +68,7 @@
   frame_id: map
   pose:
       position:
-          x: 20.8	
+          x: 20.8
           y: 8.3
           z: 0.00621
       orientation:
@@ -81,7 +81,7 @@
   frame_id: map
   pose:
       position:
-          x: 20.8	
+          x: 20.8
           y: 6.44
           z: 0.000994
       orientation:
@@ -94,7 +94,7 @@
   frame_id: map
   pose:
       position:
-          x: 20.8	
+          x: 20.8
           y: 4.38
           z: 0.00174
       orientation:
@@ -107,7 +107,7 @@
   frame_id: map
   pose:
       position:
-          x: 20.8	
+          x: 20.8
           y: 2.46
           z: 0.00032
       orientation:
@@ -133,7 +133,7 @@
   frame_id: map
   pose:
       position:
-          x: 18.1	
+          x: 18.1
           y: 12
           z: 0.00613
       orientation:
@@ -159,7 +159,7 @@
   frame_id: map
   pose:
       position:
-          x: 15.8	
+          x: 15.8
           y: 12
           z: 0.00519
       orientation:
@@ -172,7 +172,7 @@
   frame_id: map
   pose:
       position:
-          x: 14.5	
+          x: 14.5
           y: 12
           z: 0.00159
       orientation:
@@ -185,7 +185,7 @@
   frame_id: map
   pose:
       position:
-          x: 13.1	
+          x: 13.1
           y: 12
           z: 0.00401
       orientation:
@@ -198,7 +198,7 @@
   frame_id: map
   pose:
       position:
-          x: 12	
+          x: 12
           y: 12
           z: 0.00579
       orientation:
@@ -211,7 +211,7 @@
   frame_id: map
   pose:
       position:
-          x: 10.7	
+          x: 10.7
           y: 12
           z: 0.00538
       orientation:
@@ -224,7 +224,7 @@
   frame_id: map
   pose:
       position:
-          x: 9.43	
+          x: 9.43
           y: 12
           z: 0.00024
       orientation:
@@ -237,7 +237,7 @@
   frame_id: map
   pose:
       position:
-          x: 8.23	
+          x: 8.23
           y: 12
           z: 0.00464
       orientation:
@@ -263,7 +263,7 @@
   frame_id: map
   pose:
       position:
-          x: 5.75	
+          x: 5.75
           y: 12
           z: 0.00198
       orientation:
@@ -276,7 +276,7 @@
   frame_id: map
   pose:
       position:
-          x: 4.51	
+          x: 4.51
           y: 12
           z: 0.00206
       orientation:
@@ -289,7 +289,7 @@
   frame_id: map
   pose:
       position:
-          x: 3.22	
+          x: 3.22
           y: 12
           z: 0.00149
       orientation:
@@ -302,7 +302,7 @@
   frame_id: map
   pose:
       position:
-          x: 1.99	
+          x: 1.99
           y: 12
           z: 0.00158
       orientation:
@@ -315,7 +315,7 @@
   frame_id: map
   pose:
       position:
-          x: 0.729	
+          x: 0.729
           y: 12
           z: 0.00369
       orientation:
@@ -328,7 +328,7 @@
   frame_id: map
   pose:
       position:
-          x: 1.25	
+          x: 1.25
           y: 17
           z: 0.00229
       orientation:
@@ -341,7 +341,7 @@
   frame_id: map
   pose:
       position:
-          x: 3.69	
+          x: 3.69
           y: 17
           z: 0.00663
       orientation:
@@ -354,7 +354,7 @@
   frame_id: map
   pose:
       position:
-          x: 6.26	
+          x: 6.26
           y: 17
           z: 0.00216
       orientation:
@@ -380,7 +380,7 @@
   frame_id: map
   pose:
       position:
-          x: 12	
+          x: 12
           y: 17
           z: 0.00443
       orientation:
@@ -393,7 +393,7 @@
   frame_id: map
   pose:
       position:
-          x: 20.1	
+          x: 20.1
           y: 17.6
           z: 0.00742
       orientation:
