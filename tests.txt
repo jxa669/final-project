@@ -1,0 +1,31 @@
+Times taken from when command is said until the robot arrives at the goal/finishes saying instructions.
+
+Start -> Beauty 
+Time: 1:06
+Time for instructions:
+Observations:
+
+Beauty -> Entrance/Exit
+Time: 1:15
+Time for instructions: 0:16
+Observations:
+ 
+Entrance/Exit -> Bread 
+Time: 1:02
+Time for instructions: 0:12
+Observations: Slight difficulty entering aisle
+
+Bread -> Meat
+Time: 0:27
+Time for instructions: 0:14
+Observations: confused meat with meet alot
+
+Meat -> Milk
+Time: 1:06
+Time for instructions: 0:15
+Observations: Robot takes a while to turn around in aisle
+
+Milk -> Entrance/Exit
+Time: 1:36
+Time for instructions: 0:17
+Observations: Robot struggles to turn around in aisle
