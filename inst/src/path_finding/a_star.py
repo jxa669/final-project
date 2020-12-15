@@ -35,7 +35,7 @@ class AStar(object):
         # ----- Parameters
         self.TURN_LENGTH = 2.0
         self.TURN_AMOUND = math.pi * 0.5 * 0.4
-        self.GAP_RANGE = 10.0
+        self.GAP_RANGE = 5.0
         self.input_pose.header.frame_id = "/map"
         
         # ----- Sensor model
@@ -198,20 +198,6 @@ class AStar(object):
         print(self.directions)
         return time.time() - t
         
-    def old_get_number_of_turns(self, data_points):  
-        import matplotlib.pyplot as plt
-        x = np.array(range(len(data_points)))
-        y = np.array(data_points)
-        plt.plot(x, y)
-        
-        z = np.polyfit(x, y, 1)
-        p = np.poly1d(z)
-        plt.plot(x, p(x), "r--")
-        plt.plot(x, 1.2*p(x), "b--")
-        plt.plot(x, 0.8*p(x), "b--")
-        plt.ylabel('some numbers')
-        plt.show()
-        
     def get_number_of_turns(self, data_points):
         
         #import matplotlib.pyplot as plt
@@ -229,6 +215,7 @@ class AStar(object):
         plt.ylabel('Distance between robot and wall')
         plt.show()
         """
+        
         number_of_turns = 0
         close = -1
         #-1 is not decided yet, 0 is close to wall, 1 if far from wall
@@ -236,22 +223,28 @@ class AStar(object):
         x = 0
         for k in range(1, len(data_points), 1):
             y = data_points[k]
-            if (y < 0.9*p(x) - 3.0):
+            if (y <= max(0.9*p(x) - 3.0, 1.0)):
                 if (close != 0):
-                    number_of_turns += 1
+                    if close == 1:
+                        print("+1")
+                        number_of_turns += 1
                     close = 0
+                    print("Low at " + str(x))
             elif (y > 1.2*p(x) + 5.0):
                 if (close != 1):
+                    print("High at " + str(x))
                     if close == -2:
-                        number_of_turns += 1
+                        #number_of_turns += 1
+                        print("+1")
                     close = 1
             elif close == -1:
                 close = -2
             x += 1
             
         #count the number of gaps
-        #if close <= 0:
-            #number_of_turns += 1
+        if close <= 0:
+            number_of_turns += 1
+            print("+1")
                     #print(data_points)
         if number_of_turns == 0:
             return 1
