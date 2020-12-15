@@ -13,52 +13,36 @@ class command_robot(object):
 		self.command_publisher = rospy.Publisher("/command", PoseStamped)
 		self.direction_publisher = rospy.Publisher("/direction", PoseStamped)
 		self.features = rospy.get_param('~features')
-		print(self.features[1]['pose'])
-		#next(item for item in self.features if item["name"] == "label1"){print(item)}
 
 	def command(self):
-		try:
-			with self.microphone as source: self.recognizer.adjust_for_ambient_noise(source)
-			#print("Set minimum energy threshold to {}".format(r.energy_threshold))
-			while True:
-				print("Waiting for command or query")
-				with node.microphone as source: audio = node.recognizer.listen(source)
-				print("Processing command or query")
-				try:
-				#recognize speech using Google Speech Recognition
-					value = node.recognizer.recognize_google(audio)
-					print(u"You said {}".format(value).encode("utf-8"))
-					text = node.text_reasoning.voice_to_text(value)
-					if text is None:
-						continue
-					if text[0] == "direction":
-						for feature in self.features:
-							if feature['name'] == text[1]:
-								goal = PoseStamped()
+		text = node.text_reasoning.voice_to_text('move beauty')
+		#if text is None:
+			#continue
+		if text[0] == "direction":
+			for feature in self.features:
+				if feature['name'] == text[1]:
+					goal = PoseStamped()
 								
-								goal.pose.position.x = feature['pose']['position']['x']
-								goal.pose.position.y = feature['pose']['position']['y']
-								goal.pose.position.z = feature['pose']['position']['z']
-								goal.pose.orientation.w = feature['pose']['orientation']['w']
-								goal.header.frame_id = "/map"
-								self.direction_publisher.publish(goal)
-					elif text[0] == "command":
-						for feature in self.features:
-							if feature['name'] == text[1]:
-								goal = PoseStamped()
+					goal.pose.position.x = feature['pose']['position']['x']
+					goal.pose.position.y = feature['pose']['position']['y']
+					goal.pose.position.z = feature['pose']['position']['z']
+					goal.pose.orientation.w = feature['pose']['orientation']['w']
+					goal.header.frame_id = "/map"
+					self.direction_publisher.publish(goal)
+					print('Publishing to direction topic')
+		elif text[0] == "command":
+			for feature in self.features:
+				if feature['name'] == text[1]:
+					goal = PoseStamped()
 								
-								goal.pose.position.x = feature['pose']['position']['x']
-								goal.pose.position.y = feature['pose']['position']['y']
-								goal.pose.position.z = feature['pose']['position']['z']
-								goal.pose.orientation.w = feature['pose']['orientation']['w']
-								goal.header.frame_id = "map"
-								self.command_publisher.publish(goal)
-				except sr.UnknownValueError:
-					print("Unable to process command or query")
-				except sr.RequestError as e:
-					print("Couldn't request results from Google Speech Recognition service; {0}".format(e))
-		except KeyboardInterrupt:
-			pass
+					goal.pose.position.x = feature['pose']['position']['x']
+					goal.pose.position.y = feature['pose']['position']['y']
+					goal.pose.position.z = feature['pose']['position']['z']
+					goal.pose.orientation.w = feature['pose']['orientation']['w']
+					goal.header.frame_id = "map"
+					self.command_publisher.publish(goal)
+					print('Publishing to command topic')
+		
 
 if __name__ == '__main__':
 	rospy.init_node("command_robot")
