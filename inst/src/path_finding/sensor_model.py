@@ -28,8 +28,8 @@ class SensorModel(object):
         
         self.ROBOT_SIZE = 5
         self.PATH_SIZE = 7
-        self.ROBOT_SIZE_M = 0.3
-        self.PATH_SIZE_M = 0.4
+        self.ROBOT_SIZE_M = 0.2
+        self.PATH_SIZE_M = 0.3
         
         self.checked_places = dict({})
         self.checked_paths = dict({})
@@ -136,11 +136,11 @@ class SensorModel(object):
         delta_y = y2 - y1
         m = (max(abs(delta_x), abs(delta_y)))
         if m == 0:
-            return self.path_free_f(int(x1), int(y1), self.ROBOT_SIZE - 2)
+            return self.path_free_f(int(x1), int(y1), self.PATH_SIZE - 1)
         for i in range(int(m) + 1):
             x = int(x1 + (delta_x * i) / m)
             y = int(y1 + (delta_y * i) / m)
-            if not self.path_free_f(x, y, self.ROBOT_SIZE - 2):
+            if not self.path_free_f(x, y, self.PATH_SIZE - 1):
                 return i
         return -1
         
