@@ -3,7 +3,7 @@
   frame_id: map
   pose:
       position:
-          x: 28.7
+          x: 27
           y: 18.2
           z: 0.00358
       orientation:
