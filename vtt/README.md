@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-### pyaudio:
+### PyAudio:
 
 * To install PyAudio for microphone input:
         
