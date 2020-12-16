@@ -1,4 +1,4 @@
-# voice to text
+# Voice to Text
 
 ## Prerequisites
 
